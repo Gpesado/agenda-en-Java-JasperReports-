@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-03-30T21:17:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="284e0c88-a4b2-4ff8-98a2-d67b80bcffaf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Fecha" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[telefono]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nombre]]></fieldDescription>
+	</field>
+	<field name="domicilio" class="dto.Domicilio">
+		<fieldDescription><![CDATA[domicilio]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="fechaCumpleanos" class="java.sql.Date">
+		<fieldDescription><![CDATA[fechaCumpleanos]]></fieldDescription>
+	</field>
+	<field name="tipoContacto" class="dto.TipoContacto">
+		<fieldDescription><![CDATA[tipoContacto]]></fieldDescription>
+	</field>
+	<field name="idPersona" class="java.lang.Integer">
+		<fieldDescription><![CDATA[idPersona]]></fieldDescription>
+	</field>
+	<field name="signoZodiaco" class="java.lang.String">
+		<fieldDescription><![CDATA[signoZodiaco]]></fieldDescription>
+	</field>
+	<sortField name="signoZodiaco"/>
+	<sortField name="nombre"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{signoZodiaco}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField>
+					<reportElement mode="Transparent" x="-20" y="0" width="595" height="30" forecolor="#111117" backcolor="#3517CF" uuid="2a2c17f2-9790-462b-87ec-150b284701e3"/>
+					<textFieldExpression><![CDATA[$F{signoZodiaco}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="41">
+				<textField>
+					<reportElement x="480" y="11" width="55" height="19" uuid="ecbabe8d-0944-4de1-b422-fd8c627f44ba"/>
+					<textFieldExpression><![CDATA["Total: "+$V{Group1_COUNT}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="18" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="550" height="40" uuid="fbf866cd-64dc-4043-b98c-ed8d9f31d19c"/>
+				<staticText>
+					<reportElement x="0" y="10" width="170" height="30" uuid="df09700e-f0a8-43aa-a9d6-1430d1a7476d"/>
+					<textElement>
+						<font size="18"/>
+					</textElement>
+					<text><![CDATA[Personas]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="489" y="2" width="56" height="20" uuid="0706116d-f632-4605-96d8-35fe765b5d67"/>
+					<textFieldExpression><![CDATA[$P{Fecha}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="390" y="2" width="102" height="20" uuid="4c9394fa-e0b1-4d17-9e4d-cc7deafc6164"/>
+					<text><![CDATA[Reporte generado el:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="4" width="550" height="24" uuid="d078763f-d7ce-421d-8cc3-c9d81fe255f9"/>
+				<staticText>
+					<reportElement x="3" y="2" width="160" height="20" uuid="8bd693bf-e003-4042-a1f8-881763b9ba1e"/>
+					<text><![CDATA[Lista de Personas]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<frame>
+				<reportElement x="-20" y="6" width="595" height="23" uuid="23209a62-cc9d-4b81-8e93-aa9cc3a92b36"/>
+				<staticText>
+					<reportElement x="0" y="1" width="99" height="21" uuid="6f5462fa-eb72-479f-bb27-fb5ef7144791"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="99" y="3" width="70" height="20" uuid="e2252ea3-811b-43d8-ae6b-e9b261b705f9"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Teléfono]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="183" y="3" width="70" height="20" uuid="cbdb962c-622a-4275-b237-74dc7ba6d215"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Domicilio]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="280" y="2" width="60" height="22" uuid="1827f670-58e4-48ec-ac0e-06cf7cf01344"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="339" y="1" width="121" height="21" uuid="ce6c766c-5b33-430b-8892-daaa6fffb9ef"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Fecha de Cumpleaños]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="1" width="60" height="20" uuid="14f56aab-3dcb-4ee1-902a-adce786b97ff"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Tipo de Contacto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="520" y="0" width="60" height="22" uuid="793c626f-5713-4b7d-9f1b-5d6dcd4a59e0"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Signo]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="10" width="80" height="19" uuid="9fce8279-9071-488c-9b7d-d229e5e6199e"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="8" width="100" height="21" uuid="70f2ca26-53ad-464e-911f-87a3b02f2b87"/>
+				<textFieldExpression><![CDATA[$F{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="8" width="80" height="21" uuid="a7e34158-b857-44f1-9419-48101769ddd6"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="9" width="110" height="21" uuid="07fb503a-a574-4a40-9467-f00e3dad14f7"/>
+				<textFieldExpression><![CDATA[$F{fechaCumpleanos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="8" width="50" height="22" uuid="4fbb7555-b02b-4aa2-90d8-4cfb705ee28e"/>
+				<textFieldExpression><![CDATA[$F{tipoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="10" width="78" height="19" uuid="b1d23168-306c-48c3-a27f-59be2963fc5a"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="7" width="68" height="22" uuid="0a01ecb0-a476-4c5f-8bfd-8b16943e9788"/>
+				<textFieldExpression><![CDATA[$F{signoZodiaco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="220" splitType="Stretch">
+			<textField>
+				<reportElement x="380" y="190" width="100" height="30" uuid="5ce007da-8e81-48b7-91fd-8e603c20d7ef"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="475" y="189" width="100" height="30" uuid="52b869cb-a151-48f6-ad3c-3147a8d111e8"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement key="" x="50" y="0" width="200" height="200" uuid="5ba1676d-7601-498d-bc4a-b3d1747b2844"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset maxCount="12">
+					<keyExpression><![CDATA[$F{signoZodiaco}]]></keyExpression>
+					<valueExpression><![CDATA[$V{Group1_COUNT}]]></valueExpression>
+				</pieDataset>
+				<piePlot labelFormat="{2}">
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<textField>
+				<reportElement x="450" y="110" width="100" height="30" uuid="9a970a34-ffbd-4202-9377-125ba56b8b18"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
